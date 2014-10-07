@@ -1,0 +1,28 @@
+{
+  "name": "meadowlark",
+  "version": "1.0.0",
+  "description": "Web Development with Node & Express ",
+  "main": "meadowlark.js",
+  "scripts": {
+    "test": "foobar"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bigbassroller/meadowlark"
+  },
+  "keywords": [
+    "Node",
+    "Express"
+  ],
+  "author": "Michael Chavez",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/bigbassroller/meadowlark/issues"
+  },
+  "homepage": "https://github.com/bigbassroller/meadowlark",
+  "dependencies": {
+    "express": "^4.9.5",
+    "express-handlebars": "^1.1.0",
+    "express3-handlebars": "^0.5.2"
+  }
+}
