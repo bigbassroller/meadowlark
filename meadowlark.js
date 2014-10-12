@@ -4,6 +4,9 @@ var express = require('express');
 
 var app = express();
 
+// For stringent security, hide "x-powered-by: Express" in the headers
+app.disable('x-powered-by');
+
 // set up handlebars view engine
 var handlebars = require('express3-handlebars')
 	.create({ defaultLayout: 'main' });
@@ -46,6 +49,15 @@ app.get('/tours/oregon-coast', function(req, res){
 app.get('/tours/request-group-rate', function(req, res){
 	res.render('tours/request-group-rate');
 });
+
+// Browser Request Headers Info
+app.get('/headers', function(req,res){
+	res.set('Content-Type','text/plain');
+	var s = '';
+	for(var name in req.headers) s += name + ': ' + req.headers[name] + '\n';
+	res.send(s);
+});
+
 
 // 404 catch-all handler (middleware)
 app.use(function(req, res){
